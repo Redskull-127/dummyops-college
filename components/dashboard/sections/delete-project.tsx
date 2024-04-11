@@ -1,12 +1,12 @@
 "use client"
 
-import Router from "next/navigation"
+import {useRouter} from "next/navigation"
 
 import { DeleteProject } from "@/lib/server/db-functions"
 import { AlertDialogAction } from "@/components/ui/alert-dialog"
 
 export default function DeleteProjectButton({ uniId }: { uniId: string }) {
-  const router = Router.useRouter()
+  const router = useRouter()
 
   return (
     <AlertDialogAction
